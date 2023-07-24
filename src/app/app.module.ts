@@ -11,12 +11,14 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {SpinnerInterceptor} from "./Interceptores/spinner.interceptor";
 import {ToastModule} from "primeng/toast";
 import {ConfirmDialogModule} from "primeng/confirmdialog";
+import { InicioComponent } from './Componentes/inicio/inicio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    InicioComponent
   ],
   imports: [
     HttpClientModule,
