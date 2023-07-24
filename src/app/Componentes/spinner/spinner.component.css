@@ -1,0 +1,24 @@
+.progress-spinner {
+  position: fixed;
+  z-index: 999;
+  height: 0cm;
+  width: 0cm;
+  overflow: visible;
+  margin: auto;
+  top: 0cm;
+  left: 0cm;
+  bottom: 0cm;
+  right: 0cm;
+}
+
+/* Transparent Overlay */
+.progress-spinner:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.53);
+}
