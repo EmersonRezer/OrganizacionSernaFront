@@ -60,6 +60,24 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "dev": {
+              "production": false,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/config/environment.ts"
+                }
+              ]
+            },
+            "prod": {
+              "production": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/config/environment.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
