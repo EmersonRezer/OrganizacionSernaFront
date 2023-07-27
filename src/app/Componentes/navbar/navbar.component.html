@@ -11,19 +11,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link menu" [class.menu_active]="inicio" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link menu" [class.menu_active]="inicio" aria-current="page" (click)="goTo('/inicio')">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link menu" [class.menu_active]="nosotros" aria-current="page" href="#">Sobre Nosotros</a>
+          <a class="nav-link menu" [class.menu_active]="nosotros" aria-current="page" (click)="goTo('/nosotros')">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link menu" [class.menu_active]="negocio" aria-current="page" href="#">Negocio</a>
+          <a class="nav-link menu" [class.menu_active]="negocio" aria-current="page" (click)="goTo('/negocio')">Negocio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link menu" [class.menu_active]="bienestar" aria-current="page" href="#">Bienestar</a>
+          <a class="nav-link menu" [class.menu_active]="bienestar" aria-current="page" (click)="goTo('/bienestar')">Bienestar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link menu" [class.menu_active]="contactanos" aria-current="page" href="#">Contáctanos</a>
+          <a class="nav-link menu" [class.menu_active]="contactanos" aria-current="page" (click)="goTo('/contactanos')">Contáctanos</a>
         </li>
       </ul>
     </div>

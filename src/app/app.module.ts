@@ -12,13 +12,21 @@ import {SpinnerInterceptor} from "./Interceptores/spinner.interceptor";
 import {ToastModule} from "primeng/toast";
 import {ConfirmDialogModule} from "primeng/confirmdialog";
 import { InicioComponent } from './Componentes/inicio/inicio.component';
+import { NosotrosComponent } from './Componentes/nosotros/nosotros.component';
+import { NegocioComponent } from './Componentes/negocio/negocio.component';
+import { BienestarComponent } from './Componentes/bienestar/bienestar.component';
+import { ContactanosComponent } from './Componentes/contactanos/contactanos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SpinnerComponent,
-    InicioComponent
+    InicioComponent,
+    NosotrosComponent,
+    NegocioComponent,
+    BienestarComponent,
+    ContactanosComponent
   ],
   imports: [
     HttpClientModule,

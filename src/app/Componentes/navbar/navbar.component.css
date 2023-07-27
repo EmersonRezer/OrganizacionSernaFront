@@ -1,9 +1,11 @@
 .menu {
   color: #4d4d4d;
+  transition: font-size 0.25s ease;
   font-size: 20px;
 }
 
 .menu_active {
+  transition: font-size 0.25s ease;
   color: black;
   font-size: 30px;
 }
@@ -17,6 +19,7 @@
   transition: font-size 0.25s ease;
   font-size: 30px;
   color: black;
+  cursor: pointer;
 }
 
 .colorNavBar {

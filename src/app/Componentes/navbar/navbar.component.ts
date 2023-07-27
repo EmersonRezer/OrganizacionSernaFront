@@ -1,5 +1,5 @@
 import {Component, HostListener} from '@angular/core';
-import {Router} from "@angular/router";
+import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
@@ -16,6 +16,22 @@ export class NavbarComponent {
   largo!: boolean;
 
   constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        console.log('Ruta actual:', event.url);
+        this.detectarRuta();
+      }
+    });
+    this.largo = window.innerWidth > 992;
+  }
+
+  @HostListener('window:resize')
+
+  onResize() {
+    this.largo = window.innerWidth > 991;
+  }
+
+  detectarRuta(){
     this.inicio = false;
     this.nosotros = false;
     this.negocio = false;
@@ -39,13 +55,10 @@ export class NavbarComponent {
         this.negocio = true;
         break;
     }
-    this.largo = window.innerWidth > 992;
   }
 
-  @HostListener('window:resize')
-
-  onResize() {
-    this.largo = window.innerWidth > 991;
+  goTo(url: string){
+    this.router.navigateByUrl(url);
   }
 
 }
