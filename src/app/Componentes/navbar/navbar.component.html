@@ -1,38 +1,35 @@
-<div class="shadow p-1 mb-2 bg-body-tertiary rounded">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Logo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Otro</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-               aria-expanded="false">
-              Abajo
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Item</a></li>
-              <li><a class="dropdown-item" href="#">Item dos</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Algo más</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg colorNavBar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/Logo.png" alt="Organización Serna" height="75">
+    </a>
+    <div *ngIf="!largo" class="menu_cel">Organización Serna</div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link menu" [class.menu_active]="inicio" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link menu" [class.menu_active]="nosotros" aria-current="page" href="#">Sobre Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link menu" [class.menu_active]="negocio" aria-current="page" href="#">Negocio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link menu" [class.menu_active]="bienestar" aria-current="page" href="#">Bienestar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link menu" [class.menu_active]="contactanos" aria-current="page" href="#">Contáctanos</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-</div>
+  </div>
+</nav>
+<hr class="border-dark opacity-100 division">
 <div class="p-3">
   <router-outlet></router-outlet>
 </div>

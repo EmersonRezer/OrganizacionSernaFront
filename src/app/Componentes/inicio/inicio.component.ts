@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {environment} from "../../../../config/environment";
 
 @Component({
   selector: 'app-inicio',
@@ -7,7 +6,5 @@ import {environment} from "../../../../config/environment";
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
-
-  muestra = environment.variableMuestra;
 
 }
